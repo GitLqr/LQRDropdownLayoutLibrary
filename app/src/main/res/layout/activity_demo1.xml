@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.lqr.MainActivity">
+
+    <com.lqr.dropdownLayout.LQRDropdownLayout
+        android:id="@+id/dl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:ddl_item_selected__drawable="@mipmap/ic_task_status_list_check"
+        app:ddl_item_text_gravity="left"
+        app:ddl_list_max_height="250dp"
+        app:ddl_top_btn_noraml_drawable="@mipmap/ic_dropdown_normal"
+        app:ddl_top_btn_selected_drawable="@mipmap/ic_dropdown_actived"/>
+</RelativeLayout>

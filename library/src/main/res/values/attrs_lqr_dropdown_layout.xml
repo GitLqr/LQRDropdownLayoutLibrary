@@ -1,78 +1,10 @@
-# LQRDropdownLayoutLibrary
-下拉导航菜单，使用非常简单
-
-
-##***LQRDropdownLayout***
-该项目是下拉导航菜单，使用非常简单。基于FilterDropDownMenu-master项目进行封装，因为原项目的使用太复杂了，光布局就得几十行代码，如果项目中多处用到下拉菜单，那代码的冗余度就太大了,故本布局对其进行精简，并增加更多效果（如：选中时条目的背景及旁边的图标都可自定义等）,使用时仅仅只要2个步骤：
-
-###1、设置布局
-
-	<com.lqr.dropdownLayout.LQRDropdownLayout
-        android:id="@+id/dl"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:ddl_item_selected__drawable="@mipmap/ic_task_status_list_check"
-        app:ddl_item_text_gravity="left"
-        app:ddl_list_max_height="250dp"
-        app:ddl_top_btn_noraml_drawable="@mipmap/ic_dropdown_normal"
-        app:ddl_top_btn_selected_drawable="@mipmap/ic_dropdown_actived"/>
-
-###2、代码控制
-	
-	LQRDropdownLayout mDl = (LQRDropdownLayout) findViewById(R.id.dl);
-    mDl.setCols(2);
-
-    //创建内容区
-    TextView tv = new TextView(this);
-    tv.setText("我是内容，可以是View，也可以是ViewGroup");
-
-    //创建下拉列表数据
-    final List<Map<String, String>> listData = new ArrayList<>();
-    for (int i = 0; i < mDl.getCols(); i++) {
-        //这里使用LinkedHashMap是为了让下拉列表的条目有序
-        Map<String, String> map = new LinkedHashMap<>();
-        for (int j = 0; j < 6; j++) {
-            map.put("name " + j, "value " + j);
-        }
-        listData.add(map);
-    }
-
-	//初始化（该方法必须调用）
-    mDl.init(tv, listData);
-	//设置菜单点击监听
-    mDl.setOnDropdownListListener(new LQRDropdownLayout.OnDropdownListListener() {
-        @Override
-        public void OnDropdownListSelected(int indexOfButton, int indexOfList, String textOfList, String valueOfList) {
-
-        }
-
-        @Override
-        public void onDropdownListOpen() {
-
-        }
-
-        @Override
-        public void onDropdownListClosed() {
-
-        }
-    });
-
-
-###3、可实现的效果如下：
-
-![image](screenshots/1.gif)
-![image](screenshots/2.gif)
-
-###4、其他设置
-由于该控件的可自定义属性太多，这里就一一举例了，请看其自定义属性
-	
-	<resources>
-    <declare-styleable name="DropdownLayout">
+<resources>
+    <declare-styleable name="LQRDropdownLayout">
         <!--下拉列表的列数-->
         <attr name="ddl_cols" format="integer"/>
         <!--下拉按钮与下拉列表中只显示一个，如果在下拉列表中选择了item5，则item5消失，下拉按钮显示item5的name-->
         <attr name="ddl_only_show_one" format="boolean"/>
-
+        
         <!--下拉按钮区背景-->
         <attr name="ddl_top_bg" format="color"/>
         <!--下拉按钮区的高度-->
@@ -155,5 +87,7 @@
         <!--下拉列表item下划线颜色-->
         <attr name="ddl_item_bottom_line_color" format="color"/>
 
-	</declare-styleable>
-	</resources>
+
+    </declare-styleable>
+
+</resources>

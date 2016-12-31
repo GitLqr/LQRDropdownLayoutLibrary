@@ -15,8 +15,7 @@ import com.lqr.dropdownLayout.R;
 
 
 /**
- * @创建者 CSDN_LQR
- * @描述 下拉按钮
+ * 下拉按钮
  */
 public class LQRDropdownButton extends RelativeLayout {
 

@@ -19,8 +19,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * @创建者 CSDN_LQR
- * @描述 下拉列表
+ * 下拉列表
  */
 public class LQRDropdownListView extends ScrollView {
 
@@ -36,8 +35,6 @@ public class LQRDropdownListView extends ScrollView {
 
     /**
      * 得到当前被选中的itemId
-     *
-     * @return
      */
     public int getCurrentSelectedId() {
         if (list != null && current != null)
@@ -205,8 +202,6 @@ public class LQRDropdownListView extends ScrollView {
 
     /**
      * 创建下拉列表的item下划线
-     *
-     * @return
      */
     @NonNull
     private View genItemDivider() {
@@ -222,8 +217,6 @@ public class LQRDropdownListView extends ScrollView {
 
     /**
      * 创建下拉列表中的item
-     *
-     * @return
      */
     @NonNull
     private LQRDropdownListItemView genDropdownListItemView() {

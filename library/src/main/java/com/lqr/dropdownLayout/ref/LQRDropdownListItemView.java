@@ -9,8 +9,7 @@ import android.view.Gravity;
 import android.widget.TextView;
 
 /**
- * @创建者 CSDN_LQR
- * @描述 下拉列表条目
+ * 下拉列表条目
  */
 public class LQRDropdownListItemView extends TextView {
 

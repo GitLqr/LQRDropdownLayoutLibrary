@@ -22,8 +22,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @创建者 CSDN_LQR
- * @描述 自定义的下拉布局
+ * 自定义的下拉布局
  * <p>
  * 1、一定要使用init方法进行数据初始化，默认是单列，需要多列时请在布局文件中使用cols属性进行设置，同时init的listData参数的集合个数需要与cols一致
  * 2、可以调用setOnDropdownListChecked方法监听下拉列表的条目的选中情况，以此可以做到级联
@@ -44,8 +43,6 @@ public class LQRDropdownLayout extends FrameLayout {
 
     /**
      * 设置列数
-     *
-     * @param cols
      */
     public void setCols(int cols) {
         this.cols = cols;
@@ -53,8 +50,6 @@ public class LQRDropdownLayout extends FrameLayout {
 
     /**
      * 得到列数
-     *
-     * @return
      */
     public int getCols() {
         return cols;
@@ -357,8 +352,6 @@ public class LQRDropdownLayout extends FrameLayout {
 
     /**
      * 遮盖层的点击回调
-     *
-     * @param view
      */
     private void maskClick(View view) {
         dropdownButtonsController.hide();
@@ -366,8 +359,6 @@ public class LQRDropdownLayout extends FrameLayout {
 
     /**
      * 根据自定义属性设置下拉按钮的样式
-     *
-     * @param dropdownButton
      */
     private void setDropdownButtonStyle(LQRDropdownButton dropdownButton) {
         if (topTextSize != -1)
@@ -390,8 +381,6 @@ public class LQRDropdownLayout extends FrameLayout {
 
     /**
      * 设置下拉列表和item样式
-     *
-     * @param dropdownListView
      */
     private void setDropdownListAndItemViewStyle(LQRDropdownListView dropdownListView) {
         dropdownListView.setOnlyShowOne(onlyShowOne);
@@ -446,8 +435,7 @@ public class LQRDropdownLayout extends FrameLayout {
 
 
     /**
-     * @创建者 CSDN_LQR
-     * @描述 下拉按钮与下拉列表的核心控制器
+     * 下拉按钮与下拉列表的核心控制器
      */
     public class DropdownButtonsController implements LQRDropdownListView.Container {
         private LQRDropdownListView currentDropdownList;

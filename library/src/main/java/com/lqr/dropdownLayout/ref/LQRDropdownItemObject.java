@@ -1,8 +1,5 @@
 package com.lqr.dropdownLayout.ref;
 
-/**
- * Created by Administrator on 2015/5/28.
- */
 public class LQRDropdownItemObject {
 
     public int id;

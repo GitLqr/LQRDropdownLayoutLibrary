@@ -2,14 +2,14 @@
 下拉导航菜单，使用非常简单
 
 
-##***LQRDropdownLayout***
+## ***LQRDropdownLayout***
 该项目是下拉导航菜单，使用非常简单。基于FilterDropDownMenu-master项目进行封装，因为原项目的使用太复杂了，光布局就得几十行代码，如果项目中多处用到下拉菜单，那代码的冗余度就太大了,故本布局对其进行精简，并增加更多效果（如：选中时条目的背景及旁边的图标都可自定义等）,使用时仅仅只要2个步骤：
 
-###1、导入
+### 1、导入
 
 	compile 'com.lqr.dropdownLayout:library:1.0.0'
 
-###2、设置布局
+### 2、设置布局
 
 	<com.lqr.dropdownLayout.LQRDropdownLayout
         android:id="@+id/dl"
@@ -21,7 +21,7 @@
         app:ddl_top_btn_noraml_drawable="@mipmap/ic_dropdown_normal"
         app:ddl_top_btn_selected_drawable="@mipmap/ic_dropdown_actived"/>
 
-###3、代码控制
+### 3、代码控制
 	
 	LQRDropdownLayout mDl = (LQRDropdownLayout) findViewById(R.id.dl);
     mDl.setCols(2);
@@ -62,12 +62,12 @@
     });
 
 
-###4、可实现的效果如下：
+### 4、可实现的效果如下：
 
 ![image](screenshots/1.gif)
 ![image](screenshots/2.gif)
 
-###5、其他设置
+### 5、其他设置
 由于该控件的可自定义属性太多，这里就一一举例了，请看其自定义属性
 	
 	<resources>
